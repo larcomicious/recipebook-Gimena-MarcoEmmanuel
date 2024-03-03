@@ -29,7 +29,7 @@ def recipe_list(request):
                         "quantity": "1 packet"
                     }
                 ],
-                "link": "/recipe/1"
+                "link": "recipe/1"
             },
             {
                 "name": "Recipe 2",
@@ -63,7 +63,7 @@ def recipe_list(request):
                         "quantity": "1 kilo"
                     }
                 ],
-                "link": "/recipe/2"
+                "link": "recipe/2"
             }
         ]
     }
@@ -95,7 +95,7 @@ def recipe_1(request):
                 "quantity": "1 packet"
             }
         ],
-        "link": "/recipe/1"
+        "link": "recipe/1"
     }
     return render(request, 'ledger/recipe.html', ctx)
 
@@ -133,6 +133,6 @@ def recipe_2(request):
                 "quantity": "1 kilo"
             }
         ],
-        "link": "/recipe/2"
+        "link": "recipe/2"
     }
     return render(request, 'ledger/recipe.html', ctx)

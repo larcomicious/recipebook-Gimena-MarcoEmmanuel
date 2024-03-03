@@ -8,7 +8,7 @@
         <ul>
             {% block content %}
             {% for recipe in recipes %}
-                <h2><a href="/ledger{{ recipe.link }}">{{ recipe.name }}</a></h2>
+                <h2><a href="/{{ recipe.link }}">{{ recipe.name }}</a></h2>
                 {% for ingredient in recipe.ingredients %}
                     <li>{{ ingredient.name }}, {{ ingredient.quantity }}</li>
                 {% endfor %}
