@@ -2,12 +2,20 @@
 <html lang="en">
     <head>
         <title>Recipe Book</title>
+        <h1>Recipe Book</h1>
+        {% if request.user.is_authenticated %}
+            <form action="{% url 'logout' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+        <h2>{% block title %}{% endblock %}</h2>
     </head>
     <body>
-        <h1>Recipe Book</h1>
         <ul>
             {% block content %}
-
             {% endblock %}
         </ul>
     </body>
